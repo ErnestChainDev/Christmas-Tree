@@ -147,6 +147,123 @@
             padding: 2px 5px;
             pointer-events: none;
         }
+
+        /* ===============================
+        MOBILE & TABLET RESPONSIVE
+        =============================== */
+
+        /* Tablets & small laptops */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 42px;
+                letter-spacing: 4px;
+                text-align: center;
+            }
+
+            .controls-wrapper {
+                top: 20px;
+                right: 20px;
+                gap: 8px;
+            }
+
+            .upload-btn {
+                padding: 8px 16px;
+                font-size: 9px;
+                min-width: 100px;
+            }
+
+            #webcam-wrapper {
+                width: 220px;
+                height: 165px;
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+
+        /* Phones (portrait & landscape) */
+        @media (max-width: 768px) {
+            #ui-layer {
+                padding-top: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+                letter-spacing: 3px;
+                text-align: center;
+            }
+
+            /* Move controls to bottom for thumb reach */
+            .controls-wrapper {
+                position: fixed;
+                bottom: 20px;
+                top: auto;
+                right: 50%;
+                transform: translateX(50%);
+                align-items: center;
+                gap: 12px;
+                background: rgba(0, 0, 0, 0.35);
+                padding: 10px 14px;
+                border-radius: 10px;
+                -webkit-backdrop-filter: blur(6px);
+                backdrop-filter: blur(6px);
+            }
+
+            .btn-group {
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+            }
+
+            .upload-btn {
+                width: 100%;
+                font-size: 10px;
+                padding: 12px 18px;
+            }
+
+            .hint-text {
+                text-align: center;
+                font-size: 8px;
+            }
+
+            /* Webcam becomes picture-in-picture */
+            #webcam-wrapper {
+                width: 140px;
+                height: 105px;
+                bottom: 110px;
+                left: auto;
+                right: 12px;
+                border-radius: 6px;
+            }
+
+            #debug-info {
+                font-size: 8px;
+            }
+        }
+
+        /* Very small phones */
+        @media (max-width: 420px) {
+            h1 {
+                font-size: 22px;
+                letter-spacing: 2px;
+            }
+
+            .upload-btn {
+                font-size: 9px;
+                padding: 10px 14px;
+            }
+
+            #webcam-wrapper {
+                width: 120px;
+                height: 90px;
+            }
+        }
+
+        /* Touch optimization */
+        @media (pointer: coarse) {
+            .upload-btn {
+                min-height: 44px; /* iOS/Android tap target */
+            }
+        }
     </style>
     
     <style>
